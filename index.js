@@ -29,7 +29,7 @@ DataReader.prototype.readVector = function(floor, ceiling) {
 DataReader.prototype.peekBytes = function(from, to) {
   assert(from >= 0);
   assert(this.bytesRemaining() >= to);
-  this.data.slice(this.pos + from, this.pos + to);
+  return this.data.slice(this.pos + from, this.pos + to);
 };
 
 DataReader.prototype.bytesRemaining = function() {
